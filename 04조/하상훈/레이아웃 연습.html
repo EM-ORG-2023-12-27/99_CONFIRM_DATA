@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- google icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+    </style>
+
+
+
+    <!-- /* Tablet */ -->
+    <link rel="stylesheet" href="./css/tablet.css" media="all and (max-width:1024px)">
+
+    <!-- /* Mobile */ -->
+    <link rel="stylesheet" href="./css/mobile.css" media="all and (max-width:480px)">
+
+    <style>
+        /* common */
+        *{
+            margin : 5px;
+            border : 1px solid;
+            box-sizing: border-box;
+        }
+        body{margin:0;}
+     
+        ul{ margin:0px; padding :0; list-style: none;}
+        a{ text-decoration: none; color:black;}
+        
+
+        /*  */
+        .wrapper{
+            
+        }
+
+        /* header */
+        .wrapper>header{
+            
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        /* header>.logo */
+        .wrapper>header>.header-left{
+            width:200px;
+            height : 100%;
+
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .wrapper>header>.header-left>img{
+            width:80%;
+            height:80%;
+        }
+        
+        .wrapper>header>.header-right{
+            width:100%;
+        }
+        
+        /*  */
+        .wrapper>header>.header-right>.top-header{
+            border : 0;
+            height : 35px;
+        }
+
+        .wrapper>header>.header-right>.top-header>.mobile-menu{
+            display:none;
+        }
+
+        .wrapper>header>.header-right>.top-header>.menu{
+            display:flex;
+            justify-content: right;
+            align-items: center;
+            border : 0 ;
+        }
+        .wrapper>header>.header-right>.top-header>.menu>li{
+            border : 0;
+            position:relative;
+            width:100px;
+            text-align: center;
+            font-size:0.8rem;
+        }
+        .wrapper>header>.header-right>.top-header>.menu>li::after{
+           content:'|';  
+           position:absolute;
+           left:0;
+           top:0;   
+        }
+        .wrapper>header>.header-right>.top-header>.menu>li:first-child::after{
+            content:"";
+        }
+        .wrapper>header>.header-right>.top-header>.menu>li:nth-child(3)::after{
+            content :"";
+            
+        }
+        .wrapper>header>.header-right>.top-header>.menu>li:nth-child(3)>a>span{
+            border : 0;
+        }   
+        .wrapper>header>.header-right>.top-header>.menu>li>a{
+            
+            border : 0;
+            
+        }
+
+
+        /*  */
+        .wrapper>header>.header-right>nav{
+            height :45px;
+            border : 0;
+
+        }
+        .wrapper>header>.header-right>nav>.menu{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            border : 0;
+            
+        }
+        .wrapper>header>.header-right>nav>.menu>li{
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis:200px;
+            text-align: center;
+
+            position:relative;
+            border : 0;
+            
+        }
+        .wrapper>header>.header-right>nav>.menu>li>a{
+            display:block;
+            border : 0;
+            font-size : 20px;
+            font-weight: 700;
+
+            
+        }
+        .wrapper>header>.header-right>nav>.menu>li>.submenu{
+            background-color: white;
+            z-index:3;
+            position:absolute;
+            left:0px;
+            top:35px;
+            width:100%;
+
+            display:none;
+            
+            
+            
+        }
+        .wrapper>header>.header-right>nav>.menu>li>.submenu>li{
+            height:35px;
+            line-height:35px;
+            border : 0;
+            font-size : 15px;
+        }
+        .wrapper>header>.header-right>nav>.menu>li>.submenu>li>a{
+            border : 0;
+            color :gray;
+            
+        }
+        
+        .wrapper>header>.header-right>nav>.menu:hover .submenu{
+            display :block;
+            border : 0;
+            
+            
+            
+             
+        }
+        /* .wrapper>header>.header-right>nav>.menu>li:hover .submenu{
+            display:block;
+        } */
+
+
+        /* main */
+        .wrapper>main{
+            /* height : 700px; */
+        }
+        
+        .wrapper>main>section{}
+        .wrapper>main>section.main--section{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            height:500px;
+        }
+        .wrapper>main>section.main--section>aside{
+            flex-grow:2;
+            flex-shrink: 0;
+            flex-basis: 300px;
+            align-self :stretch;
+            /* background-color: red; */
+        }
+        .wrapper>main>section.main--section>aside>img{
+
+            
+            width : 100%;
+            height : 100%;
+            object-fit: fill;
+            background-color: red;
+            
+        }
+
+        .wrapper>main>section.main--section>article{
+            flex-grow:2;
+            flex-shrink:0;
+            flex-basis : 100%;
+            align-self :stretch;
+            flex-basis : 300px;
+        }
+        .wrapper>main>section.main--section>article>img{
+            width:100%;
+            height : 100%;
+
+        }
+
+        /* sub-scetion  */
+
+
+        .wrapper>main>.menu-title{
+            border : 0;
+            font-size : 50px;
+            text-align: center;
+        }
+        .wrapper>main>section.sub--section{
+            display : flex;
+            margin : 0 auto;
+            justify-items: center;
+            text-align: center;
+            border : 0;
+            
+
+        }
+       
+        
+        
+        
+        .wrapper>main>section.sub--section>.sub-aside1{
+            flex-grow:1;
+            flex-shrink: 0;
+            flex-basis: 300px;
+            height : 500px;
+            align-self :stretch;
+
+            
+            justify-content: center;
+            border : 0;
+        }
+       
+        
+            
+        .wrapper>main>section.sub--section>.sub-aside1>img{
+            border : 0;
+            width : 90%;
+            
+            
+        }
+        .wrapper>main>section.sub--section>.sub-aside1>div{
+            border : 0;
+            font-size:25px;
+        }
+        .wrapper>main>section.sub--section>.sub-aside1>div>p{
+            border : 0;
+            font-size :15px;
+            color:gray;
+        }
+
+        .wrapper>main>section.sub--section>.sub-article{
+            flex-grow:1;
+            flex-shrink: 0;
+            flex-basis: 300px;
+            height : 500px;
+            justify-content: center;
+            align-items: center;
+            border : 0;
+        
+
+        }
+        .wrapper>main>section.sub--section>.sub-article>img{
+            border : 0;
+            width:90%;
+            
+        }
+        .wrapper>main>section.sub--section>.sub-article>div{
+            
+            border : 0;
+            font-size : 25px;
+        }
+        .wrapper>main>section.sub--section>.sub-article>div>p{
+            border : 0;
+            font-size : 15px;
+            color : gray;
+        }
+        .wrapper>main>section.sub--section>.sub-aside2{
+            flex-grow:1;
+            flex-shrink: 0;
+            flex-basis: 300px;
+            height : 500px;
+            align-self :stretch;
+            justify-content: center;
+            align-items: center;
+            border : 0;
+            
+            
+        }
+        .wrapper>main>section.sub--section>.sub-aside2>img{
+            width :90%;
+            border : 0;
+        }
+        .wrapper>main>section.sub--section>.sub-aside2>div{
+            border : 0;
+            font-size : 25px;
+        }
+        .wrapper>main>section.sub--section>.sub-aside2>div>p{
+            border : 0;
+            font-size:15px;
+            color:gray;
+        }
+        .wrapper>main>section.sub--section>.sub-article2{
+            flex-grow:1;
+            flex-shrink: 0;
+            flex-basis: 300px;
+            height : 500px;
+            align-self :stretch;
+            border : 0;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .wrapper>main>section.sub--section>.sub-article2>img{
+            width : 90%;
+            border : 0;
+            text-align: center;
+        }
+        .wrapper>main>section.sub--section>.sub-article2>div{
+            border : 0;
+            font-size : 25px;
+        }
+        .wrapper>main>section.sub--section>.sub-article2>div>p{
+            border : 0;
+            font-size : 15px;
+            color : gray;
+        }
+        
+        .wrapper>main>section.ad{
+            display : flex;
+            margin : 0 auto;
+            justify-items: center;
+            text-align: center;
+
+            /* position:relative; */
+            
+            
+            
+        }
+
+        .wrapper>main>section>.ad>aside{
+            font-size : 100px;
+        }
+        .wrapper>main>section.ad>aside>div{
+            font-size : 100px;
+            /* background-color:blueviolet; */
+
+
+        
+        }
+        .wrapper>main>section.ad>aside>.ad-title{
+            font-size : 40px;
+            font-weight: 600;
+        }
+        .wrapper>main>section.ad>aside>.ad-title>p{
+            font-size :20px;
+            font-weight:100;
+        }
+        .wrapper>main>section.ad>aside>div>p{
+            /* background-color: blue; */
+            font-size : 20px;
+        }
+        .wrapper>main>section.ad>aside{
+            flex-grow:1;
+            flex-shrink: 0;
+            flex-basis: 300px;
+            height : 300px;
+            align-self :stretch;
+
+            
+            justify-content: center;
+            border-radius: 10px 0px 0px 10px;
+            /* background-color: rgb(1, 165, 226); */
+            border : 0;
+
+            /* position: absolute; */
+            
+        }
+        .wrapper>main>section.ad>article{
+            flex-grow:4;
+            flex-shrink: 0;
+            flex-basis: 300px;
+            height : 300px;
+            align-self :stretch;
+
+            
+            justify-content: center;
+            align-self: center;
+            text-align: center;
+            
+            
+            
+        }
+
+        .wrapper>main>section.ad>aside>div{
+            border : 0;
+            align-content: center;
+            /* background-color: blue; */
+            
+            margin-top : 100px;
+            font-size : 30px;
+            
+        }
+        .wrapper>main>section.ad>aside>div>p{
+            border : 0;
+            font-size : 20px;
+        }
+        
+        .wrapper>main>section.ad>.ad-left{
+            /* background-color: blue; */
+            border : 0;
+            margin-top:90px;
+            align-items: center;
+            text-align: left;
+            
+            /* background-color: blue; */
+            /* position : absolute; */
+            
+        }
+        .wrapper>main>section.ad>.ad-left>div{
+            border : 0;
+            left : 0;
+            
+        }
+        .wrapper>main>section.ad>.ad-left>div>a{
+            border : 0;
+            margin-left : 5px;
+        }
+        
+        
+        
+
+
+
+
+        /* footer */
+        .wrapper>footer{
+            height : 200px;
+            background-color: rgb(41, 41, 41);
+            width:100%;
+            margin : 0 auto;
+            /* display : flex; */
+
+            
+        }
+        .wrapper>footer>.link{
+            left : 0px;
+            
+        }
+        .wrapper>footer>.link>span>a{
+            background-color: black;
+            /* margin-left */
+            
+        }
+        .wrapper>footer>div{
+            border : 0;
+            margin-left : 80%;
+            
+            
+            
+            
+            
+        }
+        .wrapper>footer>div>a{
+            border: 0;
+            margin-top:0;
+            background-color: green;
+            
+            display : flex;
+
+        
+         
+        }    
+        .wrapper>footer>.footer-link{
+            border : 0;
+        }
+        .wrapper>footer>.footer-link>a{
+            border :0;
+            background-color: red;
+            margin-left:100px;
+
+        }
+
+        .wrapper>footer>.info{
+            background-color: blue;
+
+            margin-top:100px;
+            text-align:left;
+        }
+            
+        .wrapper>footer>.sns{
+            /* background-color: green; */
+            margin-left : 90%;
+            border: 0;
+            
+        }
+        .wrapper>footer>.sns>img{
+            border :0;
+        }
+        .wrapper>footer>div>a>img{
+            border: 0;
+            
+        }
+
+        .wrapper>header>.logo>img{
+            border :0;
+        }
+        .wrapper>header>.logo{
+            border : 0;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    
+
+    <div class="wrapper">
+        <header>
+            <div class="logo header-left">
+                <img src="./CSS/subway.png" alt="LOGO">
+            </div>
+            <div class="header-right">
+                <div class="top-header">
+                    <ul class="menu">
+                        <li><a href="">로그인</a></li>
+                        <li><a href="">회원가입</a></li>
+                        <li><a href="https://www.subway.com/en-us/exploreourworld"><span class="material-symbols-outlined">
+                            public
+                            </span></a></li>
+                        
+                    </ul>
+                    <div class="mobile-menu">
+                        <span class="material-symbols-outlined">menu</span>
+                    </div>
+                </div>
+                <nav>
+
+                    <ul class="menu">
+                        <li>
+                            <a href="">메뉴소개</a>
+                            <ul class="submenu">
+                                <li><a href="">샌드위치</a></li>
+                                <li><a href="">랩·기타</a></li>
+                                <li><a href="">샐러드</a></li>
+                                <li><a href="">아침메뉴</a></li>
+                                <li><a href="">스마일썹</a></li>
+                                <li><a href="">단체메뉴</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">이용방법</a>
+                            <ul class="submenu">
+                                <li><a href="">써브웨이 이용방법</a></li>
+                                <li><a href="">단체메뉴 이용방법</a></li>
+                                <li><a href="">신선한 재료소개</a></li>
+                                <li><a href="">App 이용방법</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">새소식</a>
+                            <ul class="submenu">
+                                <li><a href="">이벤트·프로모션</a></li>
+                                <li><a href="">뉴스·공지사항</a></li>
+                                <li><a href="">광고영상</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">써브웨이</a>
+                            <ul class="submenu">
+                                <li><a href="">써브웨이 역사</a></li>
+                                <li><a href="">써브웨이 약속</a></li>
+                                <li><a href="">샌드위치 아티스트 지원</a></li>
+                                <li><a href="">SUBMENU4</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">가맹점</a>
+                            <ul class="submenu">
+                                <li><a href="">SUBMENU1</a></li>
+                                <li><a href="">SUBMENU2</a></li>
+                                <li><a href="">SUBMENU3</a></li>
+                                <li><a href="">SUBMENU4</a></li>
+                                <li><a href="">SUBMENU5</a></li>
+                            </ul>
+
+                               
+                            
+                        </li>
+                        <li>
+                            <a href="">온라인주문</a>
+                            <ul class="submenu">
+                                <li><a href="">SUBMENU1</a></li>
+                                <li><a href="">SUBMENU2</a></li>
+                                <li><a href="">SUBMENU3</a></li>
+                                <li><a href="">SUBMENU4</a></li>
+                                <li><a href="">SUBMENU5</a></li>
+                                <li><a href="">SUBMENu6</a></li>
+                            </ul>    
+                            
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+        </header>
+        <main>
+            
+
+            <section class="main--section">
+                <aside><img src="./css/lobster.png" alt=""></aside>
+                <article><img src="./css/soup.png" alt=""></article>
+            </section>
+            <div class="menu-title">Subway's Menu</div>
+
+            <section class="sub--section">
+                <!-- <div class="title">Subway's Menu</div> -->
+                <aside class="sub-aside1"><img src="./css/eggmayo.jpg" alt=""><div>에그마요
+                    <p>부드러운 달걀과 고소한 마요네즈가<br> 만나 더 부드러운 스테디셀러</p>
+                </div></aside>
+                <article class="sub-article"><img src="https://www.subway.co.kr/images/menu/sandwich_cl01_01.jpg" alt=""><div>이탈리안 비엠티<p>
+                    페퍼로니.살라미 그리고 햄이 만들어내는 최상의<br>조화! 전세계가 사랑하는 써브웨이의 베스트셀러!<br>Biggest Meatlest Tastiest,Its'B.M.T</p></div></article>
+                <aside class="sub-aside2">
+                    <img src="https://www.subway.co.kr/images/menu/sandwich_cl02_01.jpg" alt=""><div>비엘티
+                        <p>오리지널 아메리칸 스타일 베이컨의<br>풍미와 바삭함 그대로</p>
+                    </div></aside>
+                <article class="sub-article2"><img src="https://www.subway.co.kr/images/menu/sandwich_cl04_01.jpg" alt=""><div>햄
+                    <p>기본 중에 기본!<br>풍부한 햄이 만들어내는<br>입 안 가득 넘치는 맛의 향연</p>
+                </div></article>
+            </section>
+
+            <section class="ad">
+                <aside>
+                    <div class="ad-title">What's NEW
+                        <p>써브웨이의 다양한 소식을<br>알려드립니다</p>
+                    </div>
+                </aside>
+                <article class="ad-left">
+                    <div><a href="https://www.subway.co.kr/newsView?noticeIdx=292&query=page%3D1%26subject%3D">써브웨이와 함께하는 JTBC 수목드라마 '이 연애는 불가항력'</a>
+                    </div>
+                    <div><a href="https://www.subway.co.kr/newsView?noticeIdx=291&query=page%3D1%26subject%3D">써브웨이와 함께하는 SBS 금토드라마 '소방서 옆 경찰서 그리고 국과수</a>
+                    </div>
+                    <div><a href="https://www.subway.co.kr/newsView?noticeIdx=290&query=page%3D1%26subject%3D">써브웨이와 함께하는 tvN '이번 생도 잘 부탁해'</a></div>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <a href="" class="sns"><img src="" alt=""></a>
+            
+     
+            <aside class="footer-link">
+                <a href="">이용약관</a>
+                <a href="">개인정보처리방침</a>
+                <a href="">써브가드</a>
+                <a href="">점주관리자</a>
+                <a href="">Subway Listens</a>
+            </aside>
+            <article class="info">서울시 서초구 프린스 빌딩15층|대표:INSOO CHO(인수조)|전화:02-797-5036|사업자등록번호:101-84-04143<br>
+                SUBWAY® is a Registered Trademark of Subway IP LLC. © 2021 Subway IP LLC. All Rights Reserved.</article>
+            
+                
+                
+            <div>
+                <a href="https://www.instagram.com/subwaykorea/">
+                    <img src="data:image/png;base64,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" alt="">
+                    
+                </a>
+                
+            </div>
+            <div>
+                <a href="https://www.youtube.com/@Subwaykr">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA3ElEQVR4Ae2WIQzDIBBFEdPV6Ip6L2Y3Me9NMzuB98GbWrysqHf1otWYismm+vYFTRCEhXXjJrjkmSslLwHgi8vjxkoRKAL/J0BCSHAHGhjQgxHMwIKnY/Px+taNHd2/Bmg3p4wKuIH0Y1RQAB+ugDJxDgn0GQVMSMBmFJhDApSTYwLLQtR13xNAo0oWINS6ErXtpxInX0CmC3g1TURNkypQ+QL1IYG9hiFFRPIL8C8B/ybkO4bsFxH7Vcz+GLE/x5yBRL+LZDVQkTi2Ochn70dimQpFspKKi0AReAF/IVUTZ3/BGQAAAABJRU5ErkJggg==" alt="">
+                </a>
+                
+            </div>
+            <div>
+                <a href="https://twitter.com/subway_korea">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAA3ElEQVR4Ac2SGQDFMBBE1ylOcYpTner0neK0TnGpU53iFKc6xWl+p+f25D7InZ295Cv0mGjFUOzWDVVVa/WykaBiaBBFfsiyory3JASRjs8mInqxUGRw47CIBIy7Ew0Sh0nED4OXCwkNh8h7GrrgCkVK9a7w6Q2BjoVa6Oo9EZEDVJ7I1M4UeMDXzIEhvoukFxNMaP8o4gpon1l9qnqc7DcPIgpd7Ce0t/fJVO0q0qIsVeuY1XwNYK1gwm8J2GAqvHRF5mD7BcG0Rl6yegjw0BqdakE8Bni0RyjyDf4Y1Y0n0wNT4wAAAABJRU5ErkJggg==" alt="">
+                </a>
+            </div>
+        </footer>
+    </div>
+
+
+    
+    <style>
+        .container{
+            width:150px;
+            height:150px;
+            position:fixed;
+            left:0;right:0;top:0;bottom:0;
+            margin:auto;
+            border: 0px;
+
+            /*  */
+            perspective: 1000px;
+        }
+        .container *{
+            border : 0px;
+            margin : 0px;
+        }
+        .container>.card{
+            width:100%;
+            height:100%;
+            position:relative;
+
+            /*  */
+            transform-style:preserve-3d;
+            transition:1s;
+        }
+
+        .container>.card>.front,
+        .container>.card>.back
+        {
+            width:100%;
+            height:100%;
+            position:absolute;
+            left:0px;top:0px;
+            border-radius: 50%;
+            /* border:1px solid; */
+
+            display:flex;
+            justify-content : center;
+            align-items: center;
+            color:white;
+            /*  */
+            backface-visibility: hidden;
+
+
+        }
+        
+        .container>.card>.front{
+           background-color: orange;
+        }
+        .container>.card>.back{
+            background-color: royalblue;
+            /*  */
+            transform:rotateY(180deg);
+        }
+        .container:hover .card{
+            transform:rotateY(180deg);
+        }
+    </style>
+    <div class="container">
+        <div class="card">
+            <div class="front">노랑</div>
+            <div class="back">파랑</div>
+        </div>
+    </div>
+
+
+    
+</body>
+</html>
